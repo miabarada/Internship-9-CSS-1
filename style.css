@@ -10,6 +10,7 @@
    --color-light-gray: #c0c0c0;
    --marquee-text-size: 14px;
    --color-primary-red: #7F0019;
+   --color-beige: #d6ad7f;
 }
 
 marquee {
@@ -35,6 +36,7 @@ marquee > span {
 
 .icons:hover {
    opacity: 0.6;
+   cursor: pointer;
 }
 
 input {
@@ -57,7 +59,7 @@ input {
    border-bottom: 1px solid var(--color-light-gray);
 }
 
-.header {
+.navigation {
    display:grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 20px;
@@ -82,13 +84,50 @@ input {
    white-space: nowrap;
 }
 
-.navbar > span {
+.navbar > a {
    font-size: 16px;
    color: var(--color-medium-gray);
    border-bottom: 2px solid transparent;
    margin: 12px;
+   cursor: pointer;
+   text-decoration: none;
 }
 
-.navbar > span:hover{
+.navbar > a:hover{
    border-bottom: 2px solid var(--color-primary-red);
+}
+
+.header{
+   background-color: var(--color-beige);
+   padding-top: 7rem;
+   padding-bottom: 7rem;
+}
+
+.header-h1{
+   color: var(--color-primary-red);
+   font-size: 6rem;
+}
+
+.header-h2{
+   color: var(--color-primary-red);
+   font-size: 2.5rem;
+}
+
+.header-h3{
+   color: var(--color-primary-red);
+   font-size: 1rem;
+}
+
+.header-title{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   gap: 2em;
+   margin-left: 4em;
+}
+
+.title{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
 }
