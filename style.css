@@ -98,24 +98,30 @@ input {
 }
 
 .header{
+   display: flex;
+   flex-direction: row;
    background-color: var(--color-beige);
-   padding-top: 7rem;
-   padding-bottom: 7rem;
+   padding-top: 17vh;
+   padding-bottom: 17vh;
+   gap: 10%;
 }
 
 .header-h1{
    color: var(--color-primary-red);
    font-size: 6rem;
+   white-space: nowrap;
 }
 
 .header-h2{
    color: var(--color-primary-red);
    font-size: 2.5rem;
+   white-space: nowrap;
 }
 
 .header-h3{
    color: var(--color-primary-red);
    font-size: 1rem;
+   white-space: nowrap;
 }
 
 .header-title{
@@ -130,4 +136,40 @@ input {
    display: flex;
    flex-direction: column;
    align-items: start;
+}
+
+.header-photos{
+   width: 70%;
+   display: flex;
+   flex-direction: row;
+   gap: 1vh;
+}
+
+.header-photo {
+   display: flex;
+   align-items: end;       
+   justify-content: center;
+   background-size: cover;
+   background-position: center;
+   opacity: 0.95;
+   width: 42vh;  
+   height: 55vh;   
+}
+
+.header-photo:hover {
+   opacity: 1;
+}
+
+.header-photo > a{
+   font-size: 16px;
+   color: white;
+   border-bottom: 3px solid transparent;
+   margin: 12px;
+   cursor: pointer;
+   text-decoration: none;
+   margin-bottom: 12px;
+}
+
+.header-photo > a:hover{
+   border-bottom: 3px solid var(--color-primary-red);
 }
