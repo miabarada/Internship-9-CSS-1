@@ -3,6 +3,7 @@
    padding: 0;
    font-family: Arial, Helvetica, sans-serif;
    box-sizing:border-box;
+   overflow-x: hidden;
 }
 
 :root {
@@ -11,6 +12,7 @@
    --marquee-text-size: 14px;
    --color-primary-red: #7F0019;
    --color-beige: #d6ad7f;
+   --color-white-2: #f3f3f2;
 }
 
 marquee {
@@ -101,26 +103,25 @@ input {
    display: flex;
    flex-direction: row;
    background-color: var(--color-beige);
-   padding-top: 17vh;
-   padding-bottom: 17vh;
-   gap: 10%;
+   padding-top: 18vh;
+   padding-bottom: 18vh;
 }
 
 .header-h1{
    color: var(--color-primary-red);
-   font-size: 6rem;
+   font-size: clamp(2.5rem, 8vw, 6rem);
    white-space: nowrap;
 }
 
 .header-h2{
    color: var(--color-primary-red);
-   font-size: 2.5rem;
+   font-size: clamp(1.2rem, 4vw, 2.5rem);
    white-space: nowrap;
 }
 
 .header-h3{
    color: var(--color-primary-red);
-   font-size: 1rem;
+   font-size: clamp(0.8rem, 2vw, 1rem);
    white-space: nowrap;
 }
 
@@ -129,7 +130,7 @@ input {
    flex-direction: column;
    align-items: start;
    gap: 2em;
-   margin-left: 4em;
+   margin-left: 5vw;
 }
 
 .title{
@@ -143,6 +144,7 @@ input {
    display: flex;
    flex-direction: row;
    gap: 1vh;
+   padding-left: clamp(10vh, 15vw, 20vh);
 }
 
 .header-photo {
@@ -153,7 +155,7 @@ input {
    background-position: center;
    opacity: 0.95;
    width: 42vh;  
-   height: 55vh;   
+   aspect-ratio: 1/1.3;  
 }
 
 .header-photo:hover {
@@ -171,5 +173,70 @@ input {
 }
 
 .header-photo > a:hover{
+   border-bottom: 3px solid var(--color-primary-red);
+}
+
+.highlights {
+   background-color: var(--color-white-2);
+   padding: 5vw;
+}
+
+.highlights-h1 {
+   font-size: 1.2rem;
+   color: var(--color-medium-gray);
+}
+
+.highlights-title {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.arrows {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+
+.highlight-items {
+   display: flex;
+   overflow-x: auto;
+   scrollbar-width: none;
+   gap: 1vw;
+   padding-bottom: 1vw;
+}
+
+.highlight-items::-webkit-scrollbar {
+   display: none;              
+}
+
+.highlight-item {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   text-decoration: none;
+   color: var(--color-medium-gray);  
+   flex: 0 0 auto;       
+   min-width: 100px;
+   max-width: 300px;
+}
+
+.highlight-image {
+   width: 100%;
+   aspect-ratio: 1/1;
+   overflow: hidden;
+   margin-bottom: 1vw;
+   margin-top: 2vw;
+}
+
+.highlight-item:hover .highlight-image {
+   transform: scale(1.05);
+}
+
+.highlight-item > span {
+   border-bottom: 3px solid transparent;
+}
+
+.highlight-item:hover > span {
    border-bottom: 3px solid var(--color-primary-red);
 }
