@@ -3,11 +3,10 @@
    padding: 0;
    font-family: Arial, Helvetica, sans-serif;
    box-sizing:border-box;
-   overflow-x: hidden;
 }
 
 header {
-   position: fixed;
+   position:fixed;
    background-color: white;
    z-index: 9999;
    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
@@ -110,9 +109,8 @@ input {
    display: flex;
    flex-direction: row;
    background-color: var(--color-beige);
-   margin-top: 120px;
-   padding-top: 18vh;
    padding-bottom: 18vh;
+   padding-top: 250px;
 }
 
 .header-h1{
@@ -238,7 +236,7 @@ input {
 }
 
 .highlight-item:hover .highlight-image {
-   transform: scale(1.05);
+   transform: scale(1.01);
 }
 
 .highlight-item > span {
@@ -324,4 +322,58 @@ input {
 
 .bestsellers-photo:hover a {
    border-bottom: 3px solid var(--color-primary-red)
+}
+
+.stories{
+   display: flex;
+   flex-direction: column;
+   gap: 0.7rem;
+   padding: 7vw;
+}
+
+.stories-container{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   gap: 0.5vw;
+}
+
+.story {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 3vh;
+   text-decoration: none;
+   color: var(--color-medium-gray);
+}
+
+.story p{   
+   line-height: 1.5;
+}
+
+.story-img{  
+   background-size: cover;
+   background-position: center;
+   aspect-ratio: 5 / 6;
+   width: 20.8vw;
+   cursor: pointer;
+}
+
+.read-the-story {
+   display: flex;
+   flex-direction: row;
+   gap: 0.5vw;
+   align-items: center;
+}
+
+.story:hover .highlights-h1{
+   color: var(--color-primary-red)
+}
+
+.story:hover p{
+   color: var(--color-primary-red)
+}
+
+.story:hover span{
+   color: var(--color-primary-red)
 }
