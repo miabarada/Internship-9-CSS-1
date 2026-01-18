@@ -326,6 +326,86 @@ input {
    border-bottom: 3px solid var(--color-primary-red)
 }
 
+.popular{
+   display: flex;
+   flex-direction: column;
+   gap: 0.7rem;
+   padding: 7vw;
+   padding-top: 0;
+}
+
+.products {
+   display: flex;
+   gap: 0.5vw;
+}
+
+.product {
+   display: flex;
+   flex-direction: column;
+   gap: 1vh;
+   width: 25%;
+}
+
+.product1 {
+   width: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.product2 {
+   width: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.product3 {
+   width: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.product4 {
+   width: 100%;
+   aspect-ratio: 1 / 1;
+}
+
+.product1:hover{
+   content:url(assets/popular/women.jpg)
+}
+
+.product2:hover{
+   content: url(assets/popular/men.jpg);
+}
+
+.product3:hover{
+   content: url(assets/popular/women2.jpg);
+}
+
+.product4:hover{
+   content: url(assets/popular/bag-after.jpg);
+}
+
+.popular span {
+   color: var(--color-medium-gray);
+   font-size: 1rem;
+}
+
+.colors{
+   display: flex;
+   flex-direction: row;
+   gap: 0.5rem;
+}
+
+.color{
+   width: 1rem;
+}
+
+.new-in {
+   color: var(--color-primary-red);
+   font-size: 0.8rem;
+   padding: 6px;
+   border: 1px solid var(--color-light-gray);
+   border-radius: 2px;
+   width: fit-content;
+}
+
 .stories{
    display: flex;
    flex-direction: column;
